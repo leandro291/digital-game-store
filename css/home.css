@@ -28,6 +28,8 @@
   /* Colores de descuento */
   --discount-bg: var(--primary); 
   --discount-text: #0A0D14;  /* Texto oscuro sobre el verde */
+
+  --max-width: 1700px; /* Ancho máximo para el contenido */
 }
 
 @font-face {
@@ -92,18 +94,8 @@ p {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: var(--max-width);
   width: 100%;
-  margin: 0 auto;
-}
-
-.slider-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-
-  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -121,7 +113,7 @@ p {
   
   .logo-text {
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   img {
@@ -129,6 +121,66 @@ p {
     height: 40px;
   }
 }
+
+.header-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--input-bg);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+
+  font-family: 'TextoPrincipal', sans-serif;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+.header-search-input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+}
+
+.header-search-button {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover, &:focus {
+    background-color: var(--primary-hover);
+  }
+}
+
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-nav-item {
+  color: var(--text-primary);
+  font-family: 'TitulosTienda', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 200;
+  transition: color 0.3s ease;
+
+  .header-nav-link:hover, .header-nav-link:focus {
+    color: var(--primary-hover);
+  }     
+}
+
 
 .header-dropdown {
   position: relative;
@@ -139,8 +191,8 @@ p {
   color: var(--text-primary);
   font-family: 'TitulosTienda', sans-serif;
   text-transform: uppercase;
-  font-size: 1.7rem;
-  font-weight: 200;
+  font-size: 1.25rem;
+  font-weight: 500;
   transition: color 0.3s ease;
 
   &:hover, &:focus {
@@ -163,7 +215,7 @@ p {
       display: block;
       transition: background-color 0.3s ease;
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--primary-hover);
       }
     }
@@ -173,34 +225,26 @@ p {
   display: block;
 }
 
-.header-nav-list {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.header-nav-item {
-  color: var(--text-primary);
-  font-family: 'TitulosTienda', sans-serif;
-  font-size: 1.7rem;
-  font-weight: 200;
-  transition: color 0.3s ease;
-
-  &:hover, &:focus {
-    color: var(--primary-hover);
-  }
-}
-
 @media (max-width: 1440px) {
-  .header, .hero{
+  .header{
     padding-right: 30px;
     padding-left: 30px;
   }
 }
 
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
 .hero {
   width: 100%;
-  max-width: 1400px;
+  max-width: var(--max-width);
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -304,7 +348,7 @@ p {
 }
 
 .games-listings {
-  max-width: 1400px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
