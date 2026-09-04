@@ -5,51 +5,59 @@
 }
 
 :root {
-  /* Colores de Marca y Acción (Vibrantes y Gamers) */
-  --primary: #7c3aed;        /* Morado eléctrico (Estilo Eneba / Twitch) */
-  --primary-hover: #6d28d9;  /* Morado más intenso para el estado hover */
-  --accent: #10b981;         /* Verde brillante para botones de "Comprar" o precios */
-  --accent-hover: #059669;   /* Verde oscuro para hover del acento */
+  /* Colores Principales */
+  --primary: #00FF87;        /* Verde neón brillante */
+  --primary-hover: #00cc6c;  /* Verde ligeramente más oscuro para botones en hover */
+  --secondary: #F59E0B;      /* Naranja/Ámbar */
+  --tertiary: #38BDF8;       /* Celeste */
   
-  /* Fondos y Estructura (Modo oscuro profundo) */
-  --background: #0b0f19;     /* Fondo principal casi negro para resaltar las portadas */
-  --card-bg: #151b2b;        /* Contenedores de las tarjetas de los juegos */
-  --input-bg: #1f2937;       /* Campos de búsqueda (barra superior) */
+  /* Fondos y Estructura */
+  --background: #0A0D14;     /* El Neutral oscuro*/
+  --card-bg: #11151f;        /* Un tono apenas más claro para diferenciar las tarjetas */
+  --input-bg: #1a202c;       /* Fondo para barras de búsqueda */
   
-  /* Textos (Alto contraste) */
-  --text-primary: #ffffff;   /* Blanco puro para los títulos de los juegos */
-  --text-secondary: #94a3b8; /* Gris azulado para géneros (Ej: RPG, Acción) */
-  --text-muted: #475569;     /* Gris oscuro para precios antiguos tachados */
+  /* Textos */
+  --text-primary: #ffffff;   
+  --text-secondary: #94a3b8; /* Gris claro para categorías y detalles */
+  --text-muted: #475569;     /* Gris oscuro para precios tachados */
   
   /* Detalles Visuales */
-  --border: rgba(124, 58, 237, 0.2); /* Bordes sutiles con un toque morado */
-  --shadow: rgba(0, 0, 0, 0.6);      /* Sombras marcadas para dar profundidad */
+  --border: rgba(255, 255, 255, 0.05); /* Bordes sutiles */
+  --shadow: rgba(0, 0, 0, 0.8);
 
-  /* Alertas / Tienda */
-  --discount-bg: #ef4444;    /* Rojo intenso para las etiquetas de descuento (Ej: -80%) */
-  --discount-text: #ffffff;  /* Texto blanco para la etiqueta de descuento */
+  /* Colores de descuento */
+  --discount-bg: var(--primary); 
+  --discount-text: #0A0D14;  /* Texto oscuro sobre el verde */
 }
 
 @font-face {
-    font-family: 'CineTitulos';
-    src: url('../fonts/Outfit-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'TextoPrincipal';
+  src: url('../fonts/Geist-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'CineTexto';
-    src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Etiquetas';
+  src: url('../fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TitulosTienda';
+  src: url('../fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700; 
+  font-style: normal;
+  font-display: swap;
 }
 
 
 body {
   background-color: var(--background);
-  font-family: 'CineTexto', sans-serif;
+  font-family: 'TextoPrincipal', sans-serif;
   color: var(--text-primary);
   display: flex;
   min-height: 100vh;
@@ -68,13 +76,13 @@ ol, ul {
 }
 
 h1, h2, h3{
-  font-family: 'CineTitulos';
+  font-family: 'TitulosTienda', sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
 p {
-  font-family: 'CineTexto'
+  font-family: 'TextoPrincipal', sans-serif;
 }
 
 .header {
@@ -129,7 +137,7 @@ p {
 
 .header-drop-button {
   color: var(--text-primary);
-  font-family: 'CineTitulos', sans-serif;
+  font-family: 'TitulosTienda', sans-serif;
   text-transform: uppercase;
   font-size: 1.7rem;
   font-weight: 200;
@@ -173,7 +181,7 @@ p {
 
 .header-nav-item {
   color: var(--text-primary);
-  font-family: 'CineTitulos', sans-serif;
+  font-family: 'TitulosTienda', sans-serif;
   font-size: 1.7rem;
   font-weight: 200;
   transition: color 0.3s ease;
@@ -288,6 +296,7 @@ p {
   padding: 1rem 4rem;
   
   h2 {
+    font-family: 'TitulosTienda', sans-serif;
     text-align: left;
     font-size: 2rem;
     padding-bottom: 1rem;
@@ -333,13 +342,13 @@ p {
 }
 
 .game-title {
-  font-family: 'CineTitulos', sans-serif;
+  font-family: 'TitulosTienda', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .game-description {
-  font-family: 'CineTexto', sans-serif;
+  font-family: 'TextoPrincipal', sans-serif;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
