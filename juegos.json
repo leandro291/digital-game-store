@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "Grand Theft Auto VI",
+    "developer": "Rockstar Games",
+    "publisher": "Take-Two Interactive",
+    "release_date": "2026-11-19",
+    "platforms": ["PlayStation 5", "Xbox Series X/S"],
+    "genres": ["Action-adventure", "Open world"],
+    "summary": "Campaña ambientada en el estado de Leonida y la icónica Vice City.",
+    "gameplay_details": {
+      "estimated_duration_hours": 80,
+      "map_size_multiplier": 2.0,
+      "has_microtransactions": false
+    },
+    "media": {
+      "cover_url": "./assets/gta6.png",
+      "trailer_url": "https://www.youtube.com/watch?v=VQRLujxTm3c"
+    }
+  },
+  {
+    "id": 2,
+    "title": "The Witcher 3: Wild Hunt",
+    "developer": "CD Projekt RED",
+    "publisher": "CD Projekt",
+    "release_date": "2015-05-19",
+    "platforms": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
+    "genres": ["RPG", "Open world"],
+    "summary": "Sigue los pasos del cazador de monstruos Geralt de Rivia en la búsqueda de su hija adoptiva.",
+    "gameplay_details": {
+      "estimated_duration_hours": 50,
+      "map_size_multiplier": 1.0,
+      "has_microtransactions": false
+    },
+    "media": {
+      "cover_url": "./assets/witcher3.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=VQRLujxTm3c"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Elden Ring",
+    "developer": "FromSoftware",
+    "publisher": "Bandai Namco Entertainment",
+    "release_date": "2022-02-25",
+    "platforms": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
+    "genres": ["RPG", "Action-adventure"],
+    "summary": "Levántate, Sinluz, y déjate guiar por la gracia para esgrimir el poder del Círculo de Elden en las Tierras Intermedias.",
+    "gameplay_details": {
+      "estimated_duration_hours": 60,
+      "map_size_multiplier": 1.2,
+      "has_microtransactions": false
+    },
+    "media": {
+      "cover_url": "https://tuweb.com",
+      "trailer_url": "https://youtube.com"
+    }
+  }
+]

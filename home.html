@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>FavGames - Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Bienvenido a FavGames, tu sitio web favorito para información sobre videojuegos.">
+
+  <link rel="stylesheet" href="./css/home.css" />
+</head>
+
+<body>
+  <div class="top">
+    <header class="header">
+      <div class="container">
+        <a class="logo" href="/home.html">
+          <img class="logo-image" src="./assets/games.svg" alt="Logo de FavGames" />
+          <h1 class="logo-text">FavGames</h1>
+        </a>
+
+        <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-dropdown">
+                <a href="#" class="header-drop-button">Categorias▼</a>
+                <ul class="header-dropdown-content">
+                  <li><a href="#" data-sede="centro">Acción</a></li>
+                  <li><a href="#" data-sede="norte">Shooters</a></li>
+                  <li><a href="#" data-sede="sur">RPG</a></li>
+                </ul>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link" href="#">Ofertas Semanales</a>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link" href="#">Noticias</a>
+              </li>
+            </ul>
+        </nav>
+
+        <nav>
+          <ol class="header-nav-list">
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#">Iniciar sesión</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#">Registrarse</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <!-- <section class="hero">
+      <div class="container">
+        <img class="hero-image" src="./assets/avengers.jpg" alt="Imagen de cine" />
+      </div>
+    </section> -->
+  </div>
+
+  <section class="hero">
+    <div class="slider-container">
+      <button class="hero-button" id="prev-button">&#10094;</button>
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slide">
+          <img src="./assets/ofertas.webp" alt="Imagen de cine 1" />
+        </div>
+      </div>
+      <button class="hero-button" id="next-button">&#10095;</button>
+
+      <div class="slider-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    </div>
+
+    
+
+  </section>
+
+  <section class="games-section">
+    <div class="container">
+      <h2>Juegos mas Populares</h2>
+      <div class="games-listings">
+        <div class="games-grid" id="games-grid">
+          <article class="game-card">
+            <div class="game-poster">
+              <img src="./assets/juegos/gtavi.jpg" alt="Poster de Grand Theft Auto VI" />
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">Título de la Película</h3>
+              <p class="game-description">Descripción breve de la película.</p>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-poster">
+              <img src="./assets/juegos/theWitcher3.jpg" alt="Poster de The Witcher 3: Wild Hunt" />
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">Título de la Película</h3>
+              <p class="game-description">Descripción breve de la película.</p>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-poster">
+              <img src="./assets/juegos/uncharted.jpg" alt="Poster de Uncharted" />
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">Título de la Película</h3>
+              <p class="game-description">Descripción breve de la película.</p>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-poster">
+              <img src="./assets/juegos/uncharted.jpg" alt="Poster de Uncharted" />
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">Título de la Película</h3>
+              <p class="game-description">Descripción breve de la película.</p>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-poster">
+              <img src="./assets/juegos/uncharted.jpg" alt="Poster de Uncharted" />
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">Título de la Película</h3>
+              <p class="game-description">Descripción breve de la película.</p>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-poster">
+              <img src="./assets/interstellar.jpg" alt="Poster de la película" />
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">Título de la Película</h3>
+              <p class="game-description">Descripción breve de la película.</p>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-poster">
+              <img src="./assets/interstellar.jpg" alt="Poster de la película" />
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">Título de la Película</h3>
+              <p class="game-description">Descripción breve de la película.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <small>&copy; 2026 CineFavio. Todos los derechos reservados.</small>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores de Marca y Acción (Vibrantes y Gamers) */
+  --primary: #7c3aed;        /* Morado eléctrico (Estilo Eneba / Twitch) */
+  --primary-hover: #6d28d9;  /* Morado más intenso para el estado hover */
+  --accent: #10b981;         /* Verde brillante para botones de "Comprar" o precios */
+  --accent-hover: #059669;   /* Verde oscuro para hover del acento */
+  
+  /* Fondos y Estructura (Modo oscuro profundo) */
+  --background: #0b0f19;     /* Fondo principal casi negro para resaltar las portadas */
+  --card-bg: #151b2b;        /* Contenedores de las tarjetas de los juegos */
+  --input-bg: #1f2937;       /* Campos de búsqueda (barra superior) */
+  
+  /* Textos (Alto contraste) */
+  --text-primary: #ffffff;   /* Blanco puro para los títulos de los juegos */
+  --text-secondary: #94a3b8; /* Gris azulado para géneros (Ej: RPG, Acción) */
+  --text-muted: #475569;     /* Gris oscuro para precios antiguos tachados */
+  
+  /* Detalles Visuales */
+  --border: rgba(124, 58, 237, 0.2); /* Bordes sutiles con un toque morado */
+  --shadow: rgba(0, 0, 0, 0.6);      /* Sombras marcadas para dar profundidad */
+
+  /* Alertas / Tienda */
+  --discount-bg: #ef4444;    /* Rojo intenso para las etiquetas de descuento (Ej: -80%) */
+  --discount-text: #ffffff;  /* Texto blanco para la etiqueta de descuento */
+}
+
+@font-face {
+    font-family: 'CineTitulos';
+    src: url('../fonts/Outfit-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CineTexto';
+    src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+  background-color: var(--background);
+  font-family: 'CineTexto', sans-serif;
+  color: var(--text-primary);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3{
+  font-family: 'CineTitulos';
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: 'CineTexto'
+}
+
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  .logo-text {
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.header-dropdown {
+  position: relative;
+  display: block
+}
+
+.header-drop-button {
+  color: var(--text-primary);
+  font-family: 'CineTitulos', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 200;
+  transition: color 0.3s ease;
+
+  &:hover, &:focus {
+    color: var(--primary-hover);
+  }
+}
+
+.header-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--card-bg);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px var(--shadow);
+    z-index: 1;
+
+    a {
+      color: var(--text-primary);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        color: var(--primary-hover);
+      }
+    }
+}
+
+.header-dropdown:hover .header-dropdown-content {
+  display: block;
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-nav-item {
+  color: var(--text-primary);
+  font-family: 'CineTitulos', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 200;
+  transition: color 0.3s ease;
+
+  &:hover, &:focus {
+    color: var(--primary-hover);
+  }
+}
+
+@media (max-width: 1440px) {
+  .header, .hero{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.hero {
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.hero-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hero-slide {
+  min-width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.hero-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(11, 15, 25, 0.7);
+  color: var(--text-primary);
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#prev-button {
+  left: 10px;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#next-button {
+  right: 10px;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.hero-button:hover, .hero-button:focus {
+  background-color: var(--primary);
+  color: var(--text-primary);
+}
+
+/* Contenedor de los puntos */
+.slider-dots {
+  position: absolute;
+  bottom: 1.5rem; /* Separación desde el fondo de la imagen */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el contenedor horizontalmente */
+  display: flex;
+  gap: 0.5rem; /* Espacio entre cada punto */
+  z-index: 10; /* Asegura que estén por encima de la imagen */
+}
+
+/* Estilo base de cada punto */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3); /* Blanco semitransparente */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por los puntos inactivos */
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo especial para la imagen actual (Clase activa) */
+.dot.active {
+  background-color: var(--primary); /* Tu morado eléctrico */
+  transform: scale(1.3); /* Lo hace un poco más grande para destacar */
+  box-shadow: 0 0 10px var(--primary); /* Le da un ligero brillo neón */
+}
+
+.games-section {
+  padding: 1rem 4rem;
+  
+  h2 {
+    text-align: left;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.games-listings {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.game-card {
+  padding: .5rem;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 1rem;
+}
+
+.game-poster {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 0.5rem;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    display: block;
+  }
+}
+
+.game-info {
+  padding: 0.75rem ;
+}
+
+.game-title {
+  font-family: 'CineTitulos', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.game-description {
+  font-family: 'CineTexto', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  padding: 1rem 4rem;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
