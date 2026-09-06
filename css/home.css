@@ -19,6 +19,7 @@
   /* Textos */
   --text-primary: #ffffff;   
   --text-secondary: #94a3b8; /* Gris claro para categorías y detalles */
+  --text-secondary-2: #d2e3c8; /* Gris verdoso para etiquetas de plataforma */
   --text-muted: #475569;     /* Gris oscuro para precios tachados */
   
   /* Detalles Visuales */
@@ -316,10 +317,14 @@ p {
   background-color: transparent;
 
   cursor: pointer;
+}
 
-  &:hover, &:focus {
-    background-color: rgba(255, 255, 255, 0.03);
-    border-radius: 0.5rem;
+.game-card:hover, .game-card:focus {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 0.5rem;
+
+  .game-info .game-price {
+    color: var(--primary);
   }
 }
 
@@ -346,11 +351,16 @@ p {
   flex: 1;
   gap: 0.3rem;
 
-  .hero-label {
+  .platform-info {
     font-size: 0.75rem;
     font-weight: bold;
-    color: var(--primary);
     letter-spacing: 0.5px;
+    color: var(--text-secondary-2);
+
+    .label-platform {
+      font-family: 'Etiquetas', sans-serif;
+      color: var(--primary);
+    }
   }
 
   .game-title {
@@ -367,7 +377,7 @@ p {
 
   .game-discount {
     font-family: 'Etiquetas', sans-serif;
-    background-color: var(--text-muted);
+    background-color: rgba(255, 255, 255, 0.03);
     color: var(--text-secondary);
     font-size: 0.75rem; 
     padding: 0.2rem 0.4rem;
@@ -376,9 +386,30 @@ p {
 
   .game-price {
     font-family: 'Etiquetas', monospace;
-    color: var(--primary);
+    color: var(--text-primary);
     font-weight: bold;
     font-size: 1rem;
+  }
+}
+
+.sidebar-footer {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+
+  .sidebar-button {
+    font-family: 'Etiquetas', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary-2);
+    font-weight: 200;
   }
 }
 
@@ -401,9 +432,8 @@ p {
   align-items: center;
   padding: 0.5rem;
   border-radius: 1rem;
-  background-color: rgb(23, 24, 33);
+  background-color: rgba(255, 255, 255, 0.03);
   box-shadow: none;
-  
 }
 
 .hero-footer-icon img{
