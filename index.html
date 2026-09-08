@@ -6,7 +6,12 @@
   <meta charset="UTF-8" />
   <meta name="description" content="Bienvenido a FavGames, tu sitio web favorito para información sobre videojuegos.">
 
-  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="stylesheet" href="./css/home/base.css" />
+  <link rel="stylesheet" href="./css/home/header.css" />
+  <link rel="stylesheet" href="./css/home/hero.css" />
+  <link rel="stylesheet" href="./css/home/cards.css" />
+  <link rel="stylesheet" href="./css/home/footer.css" />
+  <link rel="stylesheet" href="./css/home/responsive.css" />
 </head>
 
 <body>
@@ -60,10 +65,7 @@
               </li>
             </ul>
         </nav>
-
-        <div>
-
-        </div>
+        
       </div>
     </header>
   </div>
@@ -71,38 +73,42 @@
   <section class="hero">
     <div class="container">
       <div class="hero-main">
-        <img class="hero-main-image" src="./assets/juegos/hero-images/bodycam.jpg" alt="Imagen destacada de juego" />
+        <img class="hero-main-image" src="./assets/game-images/hero-images/bodycam.jpg" alt="Imagen destacada de juego" />
         <div class="hero-content">
-          <div class="up-hero-labels">
-            <span class="hero-label">Nueva Actualización</span>
-            <span class="hero-label">Steam Key</span>
-            <span class="hero-label">Entrega inmediata</span>
-            <span class="hero-label">Sin Bloqueo Regional</span>
+          <div class="hero-badges">
+            <span class="badge badge-green">Nueva Actualización</span>
+            <span class="badge badge-dark">Steam Key</span>
+            <span class="badge badge-dark">Entrega inmediata</span>
+            <span class="badge badge-dark">Sin Bloqueo Regional</span>
           </div>
-          <div class="hero-games">
-            <h2 class="hero-title">Bodycam:</h2>
-            <h2 class="hero-subtitle">Locked & Loaded</h2>
+          <div class="hero-game-info">
+            <h2 class="hero-title">Bodycam:<br>
+              <span class="text-green">Locked & Loaded</span>
+            </h2>
+            
             <p class="hero-description">¡Explora la ciudad y enfréntate a desafíos en Bodycam! Descubre la nueva actualización con emocionantes misiones y mejoras.</p>
           </div>
-          <div class="down-hero-labels">
-            <span class="hero-label">FPS</span>
-            <span class="hero-label">Acción</span>
-            <span class="hero-label">Simulación</span>
-            <span class="hero-label">PvP</span>
+
+          <div class="hero-tags">
+            <span class="tag">FPS</span>
+            <span class="tag">Acción</span>
+            <span class="tag">Simulación</span>
+            <span class="tag">PvP</span>
           </div>
-          <div class="hero-game-purchase">
-            <div class="hero-game-price">
-              <span class="hero-game-discount">-20%</span>
-              <span class="hero-game-price">S/ 79.99</span>
+
+          <div class="hero-buy-section">
+            <div class="price-box">
+              <span class="discount-tag">-20%</span>
+              <div class="price-numbers">
+                <span class="original-price">S/ 99.99</span>
+                <span class="discounted-price">S/ 79.99</span>
+              </div>
             </div>
-            <div class="hero-user-selection">
-              <button class="hero-game-purchase">
-                asdasd
-              </button>
-              <button class="hero-favorite-game">
-                dsd
-              </button>
-            </div>
+
+            <button class="btn-primary">COMPRAR CLAVE INSTANTÁNEA</button>
+            <button class="hero-favorite-icon">
+              🤍
+            </button>
           </div>
 
         </div>
@@ -115,7 +121,7 @@
         <div class="sidebar-content">
           <article class="game-card">
             <div class="game-poster">
-              <img src="./assets/juegos/hero-images/2k27.jpg" alt="Poster de NBA 2k27" />
+              <img src="./assets/game-images/hero-images/2k27.jpg" alt="Poster de NBA 2k27" />
             </div>
             <div class="game-info">
               <p class="platform-info">
@@ -134,7 +140,7 @@
 
           <article class="game-card">
             <div class="game-poster">
-              <img src="./assets/juegos/hero-images/dead-by-daylight.jpg" alt="Poster de Dead by Daylight" />
+              <img src="./assets/game-images/hero-images/dead-by-daylight.jpg" alt="Poster de Dead by Daylight" />
             </div>
             <div class="game-info">
               <p class="platform-info">
@@ -152,7 +158,7 @@
           </article>
           <article class="game-card">
             <div class="game-poster">
-              <img src="./assets/juegos/hero-images/elden-ring.jpeg" alt="Poster de Elden Ring" />
+              <img src="./assets/game-images/hero-images/elden-ring.jpeg" alt="Poster de Elden Ring" />
             </div>
             <div class="game-info">
               <p class="platform-info">
@@ -170,7 +176,7 @@
           </article>
           <article class="game-card">
             <div class="game-poster">
-              <img src="./assets/juegos/hero-images/cyberpunk-2077.webp" alt="Poster de Cyberpunk 2077" />
+              <img src="./assets/game-images/hero-images/cyberpunk-2077.webp" alt="Poster de Cyberpunk 2077" />
             </div>
             <div class="game-info">
               <p class="platform-info">
@@ -251,6 +257,24 @@
     </div>
   </section>
 
+  <section class="rewards-section container">
+    <div class="rewards-banner">
+      <div class="rewards-content">
+        <span class="rewards-subtitle">Club de Recompensas</span>
+        <h2 class="rewards-title">Únete a FavGames Club y gana 5% de Cashback en todas tus compras</h2>
+        <p class="rewards-desc">
+          Acumula FavGames Coins en cada compra de claves y canjéalas por expansiones, 
+          DLCs exclusivos y juegos completos sin costo adicional.
+        </p>
+      </div>
+
+      <div class="rewards-actions">
+        <button class="btn-secondary">Ver Beneficios</button>
+        <button class="btn-primary">Crear Cuenta Gratis</button>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -275,7 +299,7 @@
 
             <div class="footer-badge-card">
               <div>
-                <img class="footer-review-svg" src="./assets/star.svg" alt="Estrella" />
+                <img class="footer-review-svg" src="./assets/blue-shield.svg" alt="Estrella" />
               </div>
               <div class="footer-review-text">
                 <p>100%</p>
