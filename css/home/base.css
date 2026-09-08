@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores Principales */
+  --primary: #00FF87;        /* Verde neón brillante */
+  --primary-hover: #00cc6c;  /* Verde ligeramente más oscuro para botones en hover */
+  --secondary: #F59E0B;      /* Naranja/Ámbar */
+  --tertiary: #38BDF8;       /* Celeste */
+  
+  /* Fondos y Estructura */
+  --background: #0A0D14;     /* El Neutral oscuro*/
+  --card-bg: #11151f;        /* Un tono apenas más claro para diferenciar las tarjetas */
+  --input-bg: #1a202c;       /* Fondo para barras de búsqueda */
+  --card-hover-bg: #ffffff08; /* Fondo para tarjetas al pasar el mouse */
+  
+  /* Textos */
+  --text-primary: #ffffff;   
+  --text-secondary: #94a3b8; /* Gris claro para categorías y detalles */
+  --text-secondary-2: #d2e3c8; /* Gris verdoso para etiquetas de plataforma */
+  --text-muted: #475569;     /* Gris oscuro para precios tachados */
+  
+  /* Detalles Visuales */
+  --border: rgba(255, 255, 255, 0.05); /* Bordes sutiles */
+  --shadow: rgba(0, 0, 0, 0.8);
+
+  /* Colores de descuento */
+  --discount-bg: var(--primary); 
+  --discount-text: #0A0D14;  /* Texto oscuro */
+
+  --max-width: 1700px;
+}
+
+@font-face {
+  font-family: 'TextoPrincipal';
+  src: url('../fonts/Geist-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Etiquetas';
+  src: url('../fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TitulosTienda';
+  src: url('../fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700; 
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  background-color: var(--background);
+  font-family: 'TextoPrincipal', sans-serif;
+  color: var(--text-primary);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3{
+  font-family: 'TitulosTienda', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: 'TextoPrincipal', sans-serif;
+}
+
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
